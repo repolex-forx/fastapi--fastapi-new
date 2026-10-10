@@ -1,1 +1,120 @@
-Initializing
+# Repolex Knowledge Graph of fastapi/fastapi-new
+
+RDF knowledge graph data for [fastapi/fastapi-new](https://github.com/fastapi/fastapi-new), parsed by [repolex](https://repolex.ai).
+
+> **Note**: This data is experimental and subject to change without notice.
+
+## How to use this data
+
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
+
+```bash
+cargo install --git https://github.com/repolex-ai/rlex
+```
+
+Verify the install:
+
+```bash
+rlex --help
+```
+
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
+
+To load this repo's data:
+
+```bash
+rlex download fastapi/fastapi-new
+```
+
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
+
+## Data structure
+
+All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) (`.nq.gz`), a standard RDF format that can be loaded into any triplestore or graph database.
+
+```
+.
+├── aggregate
+│   ├── ast
+│   │   └── 6902db31d155b661cf1bbc9ee3c10080f28cdd66
+│   │       └── chunk-001.nq.gz
+│   └── repolex
+│       └── 6902db31d155b661cf1bbc9ee3c10080f28cdd66
+│           └── chunk-001.nq.gz
+├── blob
+│   ├── 0cf05a555d202c11ad627427f52c9e1e5368e914.nq.gz
+│   ├── 0d60234da0d6f14d3130dfebad079eb7ca1e33cf.nq.gz
+│   ├── 109425d7cc395432df4a6e942094e74176647527.nq.gz
+│   ├── 115e0e843bee6277229bf0fc21db3d55a5242298.nq.gz
+│   ├── 11bbf09b5e073869363186a468b38af280ebce91.nq.gz
+│   ├── 1591365077b207a09fca211cc2654400cbf9cdf6.nq.gz
+│   ├── 16e8ab9c420b2e29030c3f8c01303c860b6b12a0.nq.gz
+│   ├── 1a304f681588bafefc03d970f0f8d6561574b691.nq.gz
+│   ├── 1b07cfef8c74ba6e7dddeed9fbd0fb7a531e4694.nq.gz
+│   ├── 2e0061f5e5dfaeeda49d050646d0a8c35a129f0d.nq.gz
+│   ├── 2e5e42001c7155d68abbc5e5428c20e87839b211.nq.gz
+│   ├── 2ee6d72e01568893326d7fbe8d7d80a8b6770440.nq.gz
+│   ├── 3551c346d1341c75ccca3465ae3a498bc84a5453.nq.gz
+│   ├── 4a8ad95b8423a6b9ff74df3edc7a4ceffc6fcbc9.nq.gz
+│   ├── 4e28416e104515e90fca4b69cc60d0c61fd15d61.nq.gz
+│   ├── 4f38e2fb5f307bc8af2c5f2d7b5c6fa6db41d705.nq.gz
+│   ├── 510b8f9515fa39fdd779d694498cfae689b395e8.nq.gz
+│   ├── 58bb20b090879360085ae7da8764d458648c54cb.nq.gz
+│   ├── 6526deb4287620e5f1c9db3644c0e32520cd2983.nq.gz
+│   ├── 69d282d56e9713df13066424e21d43d165600fa4.nq.gz
+│   ├── 73ea40f2ff49cd7462f743566bfa59d8709f1c5a.nq.gz
+│   ├── 764aa658864ff9c7a9358a9029cd6a3f9621aa8b.nq.gz
+│   ├── 7a254464cc78ccea32b3ded00513c44c4e4da412.nq.gz
+│   ├── 7bb9b64d45e154dc6684a59ceab6ced58b05c5f3.nq.gz
+│   ├── 9b801f7a57f56a594a765963c8ceec1ca32ee4d3.nq.gz
+│   ├── 9eb81aef983475b29c2d684a0f792be8c5bb26d0.nq.gz
+│   ├── a3d03bfab198d8e48f8565a4c29db0879bfeb9b7.nq.gz
+│   ├── b8737abc8e7c7aa8470b65a1293cdc5619987930.nq.gz
+│   ├── c54eb2a17b75b2ca17c9dbc237a722bb62b268a5.nq.gz
+│   ├── c8cfe3959183f8e9a50f83f54cd723f2dc9c252d.nq.gz
+│   ├── c9aa5241927d47da74b344d6457b0f8f474324ac.nq.gz
+│   ├── cb5d7ffa683f9f296e25d9228bbed814d67c58fa.nq.gz
+│   ├── d1a9f140a3b889f04f53eead485a4d47f151231e.nq.gz
+│   ├── d3d13daa41d5b772f644fc3e2fc1f66587725b89.nq.gz
+│   ├── dd0745329502a1145fa171e8130cbd3c76676e14.nq.gz
+│   ├── e07b51ec5932dac2c6cac43c7cf8539c48471a8d.nq.gz
+│   ├── e69de29bb2d1d6434b8b29ae775ad8c2e48c5391.nq.gz
+│   ├── e7f3a5f539e9330b4a85867fa7396deb4ebd043d.nq.gz
+│   ├── f333ca28d447962eca0f429c2f5cb1dc8c905dce.nq.gz
+│   ├── f3504a054c4cc4d8c989351ca6625a91c063a494.nq.gz
+│   ├── f534dc24e57b22d9b9bf11e77945d0561dd3ca3d.nq.gz
+│   ├── f79b147acc522bebcbc38cb606909d0dbc56fabd.nq.gz
+│   └── f87f906dc23ca7421b67c56eae955d577bc5f399.nq.gz
+├── branch
+│   └── branch.nq.gz
+├── commit
+│   └── commit.nq.gz
+├── filetree
+│   └── 6902db31d155b661cf1bbc9ee3c10080f28cdd66.nq.gz
+├── pr
+│   └── pr.nq.gz
+└── tag
+    └── tag.nq.gz
+
+12 directories, 50 files
+```
+
+| Directory | What it contains |
+|-----------|-----------------|
+| `blob/` | Per-file AST graphs, content-addressed by git blob SHA. Each file in the source repo gets its own graph. |
+| `aggregate/ast/` | Combined AST graph per parsed commit. Merges all blob graphs for a snapshot of the entire codebase at that point. |
+| `aggregate/lsp/` | Language Server Protocol enrichment: resolved symbols, definitions, references, and type information. |
+| `aggregate/dataflow/` | Interprocedural data flow edges between functions and modules. |
+| `aggregate/repolex/` | Combined graph (AST + LSP + dataflow) per commit. |
+| `commit/` | Git commit metadata (author, date, message, parent links). |
+| `branch/` | Branch metadata. |
+| `tag/` | Tag metadata. |
+| `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
+
+## Source repository
+
+[fastapi/fastapi-new](https://github.com/fastapi/fastapi-new)
+
+---
+*Parsed on 2026-10-10 by [repolex](https://repolex.ai)*
